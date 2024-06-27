@@ -74,6 +74,92 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB2175032C2D677500A290F9 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				DB2175092C2D69C100A290F9 /* Repositories */,
+				DB2175082C2D69B700A290F9 /* SwiftData */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		DB2175042C2D678B00A290F9 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				DB21750C2C2D69FD00A290F9 /* Repositories */,
+				DB21750B2C2D69F800A290F9 /* Entities */,
+				DB21750A2C2D69EF00A290F9 /* UseCases */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		DB2175052C2D679300A290F9 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				DB21750D2C2D6A1300A290F9 /* Main */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		DB2175062C2D67A200A290F9 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		DB2175072C2D67AE00A290F9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DBC31E462C21A65D0087752B /* WUYD.entitlements */,
+				DBC31E442C21A65D0087752B /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DB2175082C2D69B700A290F9 /* SwiftData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SwiftData;
+			sourceTree = "<group>";
+		};
+		DB2175092C2D69C100A290F9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DB21750A2C2D69EF00A290F9 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		DB21750B2C2D69F800A290F9 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		DB21750C2C2D69FD00A290F9 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		DB21750D2C2D6A1300A290F9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				DBC31E3E2C21A65B0087752B /* WUYDApp.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		DBC31E322C21A65A0087752B = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +183,13 @@
 		DBC31E3D2C21A65B0087752B /* WUYD */ = {
 			isa = PBXGroup;
 			children = (
-				DBC31E3E2C21A65B0087752B /* WUYDApp.swift */,
+				DB2175072C2D67AE00A290F9 /* Resources */,
+				DB2175062C2D67A200A290F9 /* Config */,
+				DB2175052C2D679300A290F9 /* Presentation */,
+				DB2175042C2D678B00A290F9 /* Domain */,
+				DB2175032C2D677500A290F9 /* Data */,
 				DBC31E402C21A65B0087752B /* ContentView.swift */,
 				DBC31E422C21A65B0087752B /* Item.swift */,
-				DBC31E442C21A65D0087752B /* Assets.xcassets */,
-				DBC31E462C21A65D0087752B /* WUYD.entitlements */,
 				DBC31E472C21A65D0087752B /* Preview Content */,
 			);
 			path = WUYD;
@@ -420,7 +508,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = WUYD/WUYD.entitlements;
+				CODE_SIGN_ENTITLEMENTS = WUYD/Resources/WUYD.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WUYD/Preview Content\"";
@@ -458,7 +547,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = WUYD/WUYD.entitlements;
+				CODE_SIGN_ENTITLEMENTS = WUYD/Resources/WUYD.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"WUYD/Preview Content\"";
