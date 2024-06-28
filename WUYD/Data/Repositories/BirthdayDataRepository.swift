@@ -19,4 +19,9 @@ final class BirthdayDataRepository: BirthdayRepository {
     func saveBirthday(birthday: Date) -> AnyPublisher<Result<Bool, Error>, Never> {
         self.userDefaultDataSource.saveBirthday(birthday: birthday)
     }
+    
+    func getBirthday() -> AnyPublisher<Result<Date, Error>, Never> {
+        self.userDefaultDataSource.getBirthday()
+    }
+
 }

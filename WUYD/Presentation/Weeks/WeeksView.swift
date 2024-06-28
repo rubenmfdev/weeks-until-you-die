@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct WeeksView: View {
+    @StateObject private var viewModel = WeeksViewModel()
     @State private var zoomLevel: CGFloat = 0.5
     @State private var lastZoomLevel: CGFloat = 0.5
-    let numberOfCells = 400
     let maxZoomLevel: CGFloat = 3.0
     let minZoomLevel: CGFloat = 0.2
     private var cellSize: CGFloat {
@@ -33,7 +33,7 @@ struct WeeksView: View {
                 .padding()
             ScrollView {
                 LazyVGrid(columns: columns, spacing: 10) {
-                    let range = 0..<numberOfCells
+                    let range = 0..<self.viewModel.totalWeeks
                     ForEach(range, id: \.self) { index in
                         Rectangle()
                             .fill(getFillColor(index))
@@ -68,7 +68,7 @@ struct WeeksView: View {
 
 private extension WeeksView {
     func getFillColor(_ index: Int) -> Color {
-        return index > 100 ? Color.blue : Color.black
+        return index > viewModel.weeksLived ? Color.blue : Color.black
     }
 }
 

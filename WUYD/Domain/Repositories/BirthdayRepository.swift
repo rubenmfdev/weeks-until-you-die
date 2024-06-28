@@ -10,4 +10,5 @@ import Combine
 
 protocol BirthdayRepository {
     func saveBirthday(birthday: Date) -> AnyPublisher<Result<Bool, Error>, Never>
+    func getBirthday() -> AnyPublisher<Result<Date, Error>, Never>
 }

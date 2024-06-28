@@ -17,12 +17,13 @@ struct BirthdaySelectorView: View {
             Text("Select your Birthday")
                 .font(.headline)
                 .padding()
-            
             DatePicker("Birthday", selection: $viewModel.selectedDate, displayedComponents: .date)
                 .datePickerStyle(GraphicalDatePickerStyle())
                 .padding()
             Button("Done") {
-                onDone()
+                viewModel.saveBirthday {
+                    onDone()
+                }
             }
             .padding()
         }

@@ -10,7 +10,7 @@ import Combine
 
 protocol BirthdayUserDefaultDataSourceProtocol {
     func saveBirthday(birthday: Date) -> AnyPublisher<Result<Bool, Error>, Never>
-    func loadBirthday() -> AnyPublisher<Result<Date, Error>, Never>
+    func getBirthday() -> AnyPublisher<Result<Date, Error>, Never>
 }
 
 final class BirthdayUserDefaultDataSource: BirthdayUserDefaultDataSourceProtocol {
@@ -35,7 +35,7 @@ final class BirthdayUserDefaultDataSource: BirthdayUserDefaultDataSourceProtocol
         .eraseToAnyPublisher()
     }
     
-    func loadBirthday() -> AnyPublisher<Result<Date, Error>, Never> {
+    func getBirthday() -> AnyPublisher<Result<Date, Error>, Never> {
         return Future { promise in
             if let dateData = self.userDefaults.data(forKey: self.birthdayKey) {
                 do {

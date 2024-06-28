@@ -7,13 +7,15 @@
 
 import SwiftUI
 import Combine
-import SwiftData
 
 final class BirthdaySelectorViewModel: ObservableObject {
+    
+    // MARK: - Properties
     @Published var selectedDate: Date = Date()
-    
     let saveBirthdayUseCase: SaveBirthdayUseCaseProtocol
-    
+    private var cancellables = Set<AnyCancellable>()
+
+    // MARK: - Initializers
     init(
         saveBirthdayUseCase: SaveBirthdayUseCaseProtocol
     ) {
@@ -21,6 +23,20 @@ final class BirthdaySelectorViewModel: ObservableObject {
     }
 }
 
+// MARK: - Public methods
+extension BirthdaySelectorViewModel {
+    func saveBirthday(finished: @escaping () -> Void) {
+        saveBirthdayUseCase
+            .execute(input: .init(birthday: selectedDate))
+            .sink { result in
+                finished()
+                return
+            }
+            .store(in: &cancellables)
+    }
+}
+
+// MARK: - Property injection
 extension BirthdaySelectorViewModel {
     convenience init() {
         let userDefaultDataSource = BirthdayUserDefaultDataSource()
