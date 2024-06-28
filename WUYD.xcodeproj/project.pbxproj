@@ -12,6 +12,11 @@
 		DB2175142C2EB38000A290F9 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2175132C2EB38000A290F9 /* MainCoordinator.swift */; };
 		DB2175162C2EB68100A290F9 /* MainCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2175152C2EB68100A290F9 /* MainCoordinatorView.swift */; };
 		DB2175192C2EB6D300A290F9 /* WeeksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2175182C2EB6D300A290F9 /* WeeksView.swift */; };
+		DB21751B2C2EF5C900A290F9 /* SaveBirthdayUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21751A2C2EF5C900A290F9 /* SaveBirthdayUseCase.swift */; };
+		DB21751D2C2EF6CB00A290F9 /* BirthdayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21751C2C2EF6CB00A290F9 /* BirthdayRepository.swift */; };
+		DB21751F2C2EF75300A290F9 /* BirthdayDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21751E2C2EF75300A290F9 /* BirthdayDataRepository.swift */; };
+		DB2175212C2EF83F00A290F9 /* BirthdaySwiftDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2175202C2EF83F00A290F9 /* BirthdaySwiftDataSource.swift */; };
+		DB21752A2C2F02D900A290F9 /* BirthdayDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2175292C2F02D900A290F9 /* BirthdayDTO.swift */; };
 		DBC31E3F2C21A65B0087752B /* WUYDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC31E3E2C21A65B0087752B /* WUYDApp.swift */; };
 		DBC31E412C21A65B0087752B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC31E402C21A65B0087752B /* ContentView.swift */; };
 		DBC31E432C21A65B0087752B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC31E422C21A65B0087752B /* Item.swift */; };
@@ -45,6 +50,11 @@
 		DB2175132C2EB38000A290F9 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
 		DB2175152C2EB68100A290F9 /* MainCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorView.swift; sourceTree = "<group>"; };
 		DB2175182C2EB6D300A290F9 /* WeeksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksView.swift; sourceTree = "<group>"; };
+		DB21751A2C2EF5C900A290F9 /* SaveBirthdayUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveBirthdayUseCase.swift; sourceTree = "<group>"; };
+		DB21751C2C2EF6CB00A290F9 /* BirthdayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayRepository.swift; sourceTree = "<group>"; };
+		DB21751E2C2EF75300A290F9 /* BirthdayDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayDataRepository.swift; sourceTree = "<group>"; };
+		DB2175202C2EF83F00A290F9 /* BirthdaySwiftDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaySwiftDataSource.swift; sourceTree = "<group>"; };
+		DB2175292C2F02D900A290F9 /* BirthdayDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayDTO.swift; sourceTree = "<group>"; };
 		DBC31E3B2C21A65B0087752B /* WUYD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WUYD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC31E3E2C21A65B0087752B /* WUYDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUYDApp.swift; sourceTree = "<group>"; };
 		DBC31E402C21A65B0087752B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -87,6 +97,7 @@
 		DB2175032C2D677500A290F9 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				DB2175262C2F02AD00A290F9 /* UserDefault */,
 				DB2175092C2D69C100A290F9 /* Repositories */,
 				DB2175082C2D69B700A290F9 /* SwiftData */,
 			);
@@ -132,6 +143,8 @@
 		DB2175082C2D69B700A290F9 /* SwiftData */ = {
 			isa = PBXGroup;
 			children = (
+				DB2175232C2EFDC000A290F9 /* DTOs */,
+				DB2175222C2EFDB300A290F9 /* DataSources */,
 			);
 			path = SwiftData;
 			sourceTree = "<group>";
@@ -139,6 +152,7 @@
 		DB2175092C2D69C100A290F9 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DB21751E2C2EF75300A290F9 /* BirthdayDataRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -146,6 +160,7 @@
 		DB21750A2C2D69EF00A290F9 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				DB21751A2C2EF5C900A290F9 /* SaveBirthdayUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -160,6 +175,7 @@
 		DB21750C2C2D69FD00A290F9 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
+				DB21751C2C2EF6CB00A290F9 /* BirthdayRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -188,6 +204,45 @@
 				DB2175182C2EB6D300A290F9 /* WeeksView.swift */,
 			);
 			path = Weeks;
+			sourceTree = "<group>";
+		};
+		DB2175222C2EFDB300A290F9 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataSources;
+			sourceTree = "<group>";
+		};
+		DB2175232C2EFDC000A290F9 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		DB2175262C2F02AD00A290F9 /* UserDefault */ = {
+			isa = PBXGroup;
+			children = (
+				DB2175282C2F02BB00A290F9 /* DataSources */,
+				DB2175272C2F02B500A290F9 /* DTOs */,
+			);
+			path = UserDefault;
+			sourceTree = "<group>";
+		};
+		DB2175272C2F02B500A290F9 /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+				DB2175292C2F02D900A290F9 /* BirthdayDTO.swift */,
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		DB2175282C2F02BB00A290F9 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				DB2175202C2EF83F00A290F9 /* BirthdaySwiftDataSource.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 		DBC31E322C21A65A0087752B = {
@@ -381,12 +436,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB21751F2C2EF75300A290F9 /* BirthdayDataRepository.swift in Sources */,
 				DBC31E412C21A65B0087752B /* ContentView.swift in Sources */,
 				DB2175142C2EB38000A290F9 /* MainCoordinator.swift in Sources */,
 				DB2175162C2EB68100A290F9 /* MainCoordinatorView.swift in Sources */,
+				DB21751B2C2EF5C900A290F9 /* SaveBirthdayUseCase.swift in Sources */,
+				DB21751D2C2EF6CB00A290F9 /* BirthdayRepository.swift in Sources */,
 				DB2175122C2EB11400A290F9 /* BirthdaySelectorViewModel.swift in Sources */,
+				DB2175212C2EF83F00A290F9 /* BirthdaySwiftDataSource.swift in Sources */,
 				DB2175192C2EB6D300A290F9 /* WeeksView.swift in Sources */,
 				DBC31E432C21A65B0087752B /* Item.swift in Sources */,
+				DB21752A2C2F02D900A290F9 /* BirthdayDTO.swift in Sources */,
 				DBC31E3F2C21A65B0087752B /* WUYDApp.swift in Sources */,
 				DB2175102C2EB10600A290F9 /* BirthdaySelectorView.swift in Sources */,
 			);

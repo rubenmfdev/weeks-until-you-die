@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct WeeksView: View {
-    @State private var zoomLevel: CGFloat = 1.0
-    @State private var lastZoomLevel: CGFloat = 1.0
+    @State private var zoomLevel: CGFloat = 0.5
+    @State private var lastZoomLevel: CGFloat = 0.5
     let numberOfCells = 400
     let maxZoomLevel: CGFloat = 3.0
     let minZoomLevel: CGFloat = 0.2
@@ -59,7 +59,7 @@ struct WeeksView: View {
                         lastZoomLevel = zoomLevel
                     }
             )
-            
+            .scrollIndicators(.hidden)
             Spacer()
         }
         .padding()

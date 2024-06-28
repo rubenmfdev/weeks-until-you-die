@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct BirthdaySelectorView: View {
     @StateObject private var viewModel = BirthdaySelectorViewModel()
