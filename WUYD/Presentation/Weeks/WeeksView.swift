@@ -5,24 +5,70 @@
 //  Created by Ruben Marquez on 28/6/24.
 //
 
-import Foundation
 import SwiftUI
 
 struct WeeksView: View {
+    @State private var zoomLevel: CGFloat = 1.0
+    @State private var lastZoomLevel: CGFloat = 1.0
+    let numberOfCells = 400
+    let maxZoomLevel: CGFloat = 3.0
+    let minZoomLevel: CGFloat = 0.2
+    private var cellSize: CGFloat {
+        return 50 * zoomLevel
+    }
+    
+    private var fontSize: CGFloat {
+        return cellSize * 0.3
+    }
+    
+    private var columns: [GridItem] {
+        [GridItem(.adaptive(minimum: cellSize))]
+    }
+    
     var body: some View {
         VStack {
-            Text("Success!")
+            Text("Weeks Until You Die!")
                 .font(.largeTitle)
                 .fontWeight(.bold)
                 .padding()
-            
-            Text("You have successfully selected your birthday.")
-                .font(.title2)
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 10) {
+                    let range = 0..<numberOfCells
+                    ForEach(range, id: \.self) { index in
+                        Rectangle()
+                            .fill(getFillColor(index))
+                            .frame(width: cellSize, height: cellSize)
+                            .overlay(
+                                Text("\(index)")
+                                    .foregroundColor(.white)
+                                    .font(.system(size: fontSize))
+                            )
+                    }
+                }
                 .padding()
+            }
+            .gesture(
+                MagnificationGesture()
+                    .onChanged { value in
+                        let newZoomLevel = lastZoomLevel * value
+                        if newZoomLevel > minZoomLevel && newZoomLevel < maxZoomLevel {
+                            zoomLevel = newZoomLevel
+                        }
+                    }
+                    .onEnded { value in
+                        lastZoomLevel = zoomLevel
+                    }
+            )
             
             Spacer()
         }
         .padding()
+    }
+}
+
+private extension WeeksView {
+    func getFillColor(_ index: Int) -> Color {
+        return index > 100 ? Color.blue : Color.black
     }
 }
 
