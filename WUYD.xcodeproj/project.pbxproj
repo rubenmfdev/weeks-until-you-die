@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB2175102C2EB10600A290F9 /* BirthdaySelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB21750F2C2EB10600A290F9 /* BirthdaySelectorView.swift */; };
+		DB2175122C2EB11400A290F9 /* BirthdaySelectorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2175112C2EB11400A290F9 /* BirthdaySelectorViewModel.swift */; };
+		DB2175142C2EB38000A290F9 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2175132C2EB38000A290F9 /* MainCoordinator.swift */; };
+		DB2175162C2EB68100A290F9 /* MainCoordinatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2175152C2EB68100A290F9 /* MainCoordinatorView.swift */; };
+		DB2175192C2EB6D300A290F9 /* WeeksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2175182C2EB6D300A290F9 /* WeeksView.swift */; };
 		DBC31E3F2C21A65B0087752B /* WUYDApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC31E3E2C21A65B0087752B /* WUYDApp.swift */; };
 		DBC31E412C21A65B0087752B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC31E402C21A65B0087752B /* ContentView.swift */; };
 		DBC31E432C21A65B0087752B /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC31E422C21A65B0087752B /* Item.swift */; };
@@ -35,6 +40,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DB21750F2C2EB10600A290F9 /* BirthdaySelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaySelectorView.swift; sourceTree = "<group>"; };
+		DB2175112C2EB11400A290F9 /* BirthdaySelectorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdaySelectorViewModel.swift; sourceTree = "<group>"; };
+		DB2175132C2EB38000A290F9 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		DB2175152C2EB68100A290F9 /* MainCoordinatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinatorView.swift; sourceTree = "<group>"; };
+		DB2175182C2EB6D300A290F9 /* WeeksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeksView.swift; sourceTree = "<group>"; };
 		DBC31E3B2C21A65B0087752B /* WUYD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WUYD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBC31E3E2C21A65B0087752B /* WUYDApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WUYDApp.swift; sourceTree = "<group>"; };
 		DBC31E402C21A65B0087752B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +106,8 @@
 		DB2175052C2D679300A290F9 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DB2175172C2EB6C900A290F9 /* Weeks */,
+				DB21750E2C2EB0E500A290F9 /* BirthdaySelector */,
 				DB21750D2C2D6A1300A290F9 /* Main */,
 			);
 			path = Presentation;
@@ -155,9 +167,27 @@
 		DB21750D2C2D6A1300A290F9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				DBC31E3E2C21A65B0087752B /* WUYDApp.swift */,
+				DB2175132C2EB38000A290F9 /* MainCoordinator.swift */,
+				DB2175152C2EB68100A290F9 /* MainCoordinatorView.swift */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		DB21750E2C2EB0E500A290F9 /* BirthdaySelector */ = {
+			isa = PBXGroup;
+			children = (
+				DB21750F2C2EB10600A290F9 /* BirthdaySelectorView.swift */,
+				DB2175112C2EB11400A290F9 /* BirthdaySelectorViewModel.swift */,
+			);
+			path = BirthdaySelector;
+			sourceTree = "<group>";
+		};
+		DB2175172C2EB6C900A290F9 /* Weeks */ = {
+			isa = PBXGroup;
+			children = (
+				DB2175182C2EB6D300A290F9 /* WeeksView.swift */,
+			);
+			path = Weeks;
 			sourceTree = "<group>";
 		};
 		DBC31E322C21A65A0087752B = {
@@ -183,6 +213,7 @@
 		DBC31E3D2C21A65B0087752B /* WUYD */ = {
 			isa = PBXGroup;
 			children = (
+				DBC31E3E2C21A65B0087752B /* WUYDApp.swift */,
 				DB2175072C2D67AE00A290F9 /* Resources */,
 				DB2175062C2D67A200A290F9 /* Config */,
 				DB2175052C2D679300A290F9 /* Presentation */,
@@ -351,8 +382,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBC31E412C21A65B0087752B /* ContentView.swift in Sources */,
+				DB2175142C2EB38000A290F9 /* MainCoordinator.swift in Sources */,
+				DB2175162C2EB68100A290F9 /* MainCoordinatorView.swift in Sources */,
+				DB2175122C2EB11400A290F9 /* BirthdaySelectorViewModel.swift in Sources */,
+				DB2175192C2EB6D300A290F9 /* WeeksView.swift in Sources */,
 				DBC31E432C21A65B0087752B /* Item.swift in Sources */,
 				DBC31E3F2C21A65B0087752B /* WUYDApp.swift in Sources */,
+				DB2175102C2EB10600A290F9 /* BirthdaySelectorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

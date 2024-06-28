@@ -25,7 +25,7 @@ struct WUYDApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainCoordinatorView()
         }
         .modelContainer(sharedModelContainer)
     }
